@@ -1,8 +1,5 @@
 import Humans.*;
 import Locations.Cities;
-import Locations.RailStation;
-import Locations.Train;
-import Stocks.Stocks;
 import TimeOfDay.DayConditions;
 import TimeOfDay.TimeOfDay;
 

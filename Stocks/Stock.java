@@ -1,6 +1,5 @@
 package Stocks;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class Stock {
