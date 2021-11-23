@@ -1,0 +1,84 @@
+package Humans;
+
+import Locations.City;
+import Locations.Location;
+import Locations.Cities;
+import Locations.Market;
+
+import Stocks.Stock;
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class MainCharacter extends Human implements CanThinkAboutStocks {
+    private ArrayList<WearableThings> wearableThings;
+    private WearableThings wearsNow;
+    private int maxAmount;
+
+    public MainCharacter(String inputName, Location inputLocation, int inputMaxAmount) {
+        super(inputName, inputLocation);
+        maxAmount = inputMaxAmount;
+        wearableThings = new ArrayList<WearableThings>();
+    }
+
+    public void giveWearableThing(WearableThings wearableThing) {
+        if (wearableThings.size() < maxAmount) {
+            wearableThings.add(wearableThing);
+        }
+    }
+
+    public ArrayList<WearableThings> getWearableThings() {
+        return wearableThings;
+    }
+
+    public void wear(WearableThings wearableThing) {
+        if (wearableThings.contains(wearableThing)) {
+            wearsNow = wearableThing;
+            System.out.println(this.toString() + " надевает на себя " + wearableThing.toString());
+        }
+    }
+
+    public void lookAt(ThingsToLookAt thingToLookAt) {
+        System.out.println(this.toString() + " посмотрел на объект под названием " + thingToLookAt.toString());
+        if (thingToLookAt == ThingsToLookAt.NEWSPAPER)
+        {
+            System.out.println("Так как " + this.toString() + " посмотрел на объект под названием " + thingToLookAt.toString() +
+                    ", он начал считать в голове, в каком городе купит акции");
+            System.out.println("После некоторых размышлений " + this.toString() + " пришел к выводу, что в городе " +
+                    calculateTheBestOffer().toString() + " можно было бы заработать больше всего");
+        }
+    }
+
+    public City calculateTheBestOffer() {
+        List<City> cities = Cities.getAllCities();
+        float bestOffer = 0, currentOffer = 0;
+        City bestCity = new City("New City");
+        for (int i = 0; i < cities.size(); ++i) {
+            currentOffer = 0;
+            City currentCity = cities.get(i);
+            if (currentCity.getMarkets().size() == 0) {
+                continue;
+            }
+            Market currentMarket = currentCity.getMarkets().get(0);
+            ArrayList<Stock> currentStocks = currentMarket.getStocks();
+            for (int j = 0; j < currentStocks.size(); ++j) {
+                currentOffer += currentStocks.get(j).getCost();
+            }
+            currentOffer -= currentOffer * currentMarket.getTax();
+            if (bestOffer <= currentOffer) {
+                bestOffer = currentOffer;
+                bestCity = currentCity;
+            }
+        }
+        return bestCity;
+    }
+
+    public void thinkAboutSomething() {
+        System.out.println(this.toString() + " задумался");
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+}
