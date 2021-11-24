@@ -18,7 +18,7 @@ public class RailStation extends Location{
 
     public void giveTrainToAnotherStation(RailStation railStation, Train train) {
         if (railStation.getTrains().size() < railStation.getCapacity()) {
-            System.out.println(this.getTrains().get(0).toString() + " переместился со станции " + this.toString() + " на станцию " + railStation.toString());
+            System.out.println(this.getTrains().get(0).toString() + " переместился со станции " + this + " на станцию " + railStation);
             railStation.setTrain(train);
             this.trains.remove(train);
         }

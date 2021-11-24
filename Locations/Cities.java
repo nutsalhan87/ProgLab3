@@ -13,25 +13,25 @@ public class Cities {
 
     static {
         BRAHENVILLE = new City("Брехенвиль") ;
-        BRAHENVILLE.setRailStation(new RailStation("Станция города " + BRAHENVILLE.toString(), 2));
+        BRAHENVILLE.setRailStation(new RailStation("Станция города " + BRAHENVILLE, 2));
     }
 
     static {
         DAVILON = new City("Давилон") ;
-        Market market = new Market("Маркет города " + DAVILON.toString(), 0.2f);
+        Market market = new Market("Маркет города " + DAVILON, 0.2f);
         Stocks[] stocksName = Stocks.values();
         Random rnd = new Random();
         for(int i = 0; i < stocksName.length; ++i) {
             market.setStock(new Stock(rnd.nextFloat() * 300, stocksName[i].toString()));
         }
         DAVILON.setMarket(market);
-        DAVILON.setRailStation(new RailStation("Станция города " + DAVILON.toString(), 2));
+        DAVILON.setRailStation(new RailStation("Станция города " + DAVILON, 2));
         DAVILON.getRailStations().get(0).setTrain(new Train("Поезд"));
     }
 
     static {
         GRABENBERG = new City("Грабенберг") ;
-        Market market = new Market("Маркет города " + GRABENBERG.toString(), 0.12f);
+        Market market = new Market("Маркет города " + GRABENBERG, 0.12f);
         Stocks[] stocksName = Stocks.values();
         Random rnd = new Random();
         for(int i = 0; i < stocksName.length; ++i) {
@@ -42,7 +42,7 @@ public class Cities {
 
     static {
         SAN_KOMARIKA = new City("Сан-Комарика") ;
-        Market market = new Market("Маркет города " + SAN_KOMARIKA.toString(), 0.18f);
+        Market market = new Market("Маркет города " + SAN_KOMARIKA, 0.18f);
         Stocks[] stocksName = Stocks.values();
         Random rnd = new Random();
         for(int i = 0; i < stocksName.length; ++i) {

@@ -18,7 +18,7 @@ public class MainCharacter extends Human implements CanThinkAboutStocks {
     public MainCharacter(String inputName, Location inputLocation, int inputMaxAmount) {
         super(inputName, inputLocation);
         maxAmount = inputMaxAmount;
-        wearableThings = new ArrayList<WearableThings>();
+        wearableThings = new ArrayList<>();
     }
 
     public void giveWearableThing(WearableThings wearableThing) {
@@ -34,22 +34,22 @@ public class MainCharacter extends Human implements CanThinkAboutStocks {
     public void wear(WearableThings wearableThing) {
         if (wearableThings.contains(wearableThing)) {
             wearsNow = wearableThing;
-            System.out.println(this.toString() + " надевает на себя " + wearableThing.toString());
+            System.out.println(this + " надевает на себя " + wearableThing.toString());
         }
     }
 
     public void lookAt(ThingsToLookAt thingToLookAt) {
-        System.out.println(this.toString() + " посмотрел на объект под названием " + thingToLookAt.toString());
+        System.out.println(this + " посмотрел на объект под названием " + thingToLookAt);
         if (thingToLookAt == ThingsToLookAt.NEWSPAPER)
         {
-            System.out.println("Так как " + this.toString() + " посмотрел на объект под названием " + thingToLookAt.toString() +
+            System.out.println("Так как " + this + " посмотрел на объект под названием " + thingToLookAt +
                     ", он начал считать в голове, в каком городе купит акции");
-            System.out.println("После некоторых размышлений " + this.toString() + " пришел к выводу, что в городе " +
-                    calculateTheBestOffer().toString() + " можно было бы заработать больше всего");
+            System.out.println("После некоторых размышлений " + this + " пришел к выводу, что в городе " +
+                    calculateWhereTheBestOffer().toString() + " можно было бы заработать больше всего");
         }
     }
 
-    public City calculateTheBestOffer() {
+    public City calculateWhereTheBestOffer() {
         List<City> cities = Cities.getAllCities();
         float bestOffer = 0, currentOffer = 0;
         City bestCity = new City("New City");
@@ -74,7 +74,7 @@ public class MainCharacter extends Human implements CanThinkAboutStocks {
     }
 
     public void thinkAboutSomething() {
-        System.out.println(this.toString() + " задумался");
+        System.out.println(this + " задумался");
     }
 
     @Override

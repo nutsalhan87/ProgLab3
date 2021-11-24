@@ -29,14 +29,14 @@ public class Human extends Humans implements Sleepable{
         if(!isSleep) {
             human.wakeUp();
             if(super.location.equals(Cities.BRAHENVILLE.getRailStations().get(0))) {
-                System.out.println("Так как спать на станции запрещено, " + this.toString() + " разбудил человека по имени " + human.toString());
+                System.out.println("Так как спать на станции запрещено, " + this + " разбудил человека по имени " + human);
             }
             else {
-                System.out.println(this.toString() + " разбудил человека по имени " + human.toString());
+                System.out.println(this + " разбудил человека по имени " + human);
             }
         }
         else {
-            System.out.println(this.toString() + " попытался разбудить человека по имени " + human.toString() + ", а он и не спал");
+            System.out.println(this + " попытался разбудить человека по имени " + human + ", а он и не спал");
         }
     }
 

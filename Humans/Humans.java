@@ -12,7 +12,7 @@ public abstract class Humans {
     }
 
     public void changeLocation(Location newLocation) {
-        System.out.println(this.toString() + " изменил свое местоположение с локации " + location.toString() + " на локацию " + newLocation.toString());
+        System.out.println(this + " изменил свое местоположение с локации " + location + " на локацию " + newLocation);
         location = newLocation;
     }
 
