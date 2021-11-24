@@ -1,4 +1,4 @@
-package TimeOfDay;
+package timeOfDay;
 
 public enum DayConditions {
     SUNRISE {

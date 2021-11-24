@@ -1,4 +1,4 @@
-package TimeOfDay;
+package timeOfDay;
 
 import java.util.Objects;
 

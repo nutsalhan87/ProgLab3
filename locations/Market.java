@@ -1,7 +1,7 @@
-package Locations;
+package locations;
 
 import java.util.ArrayList;
-import Stocks.Stock;
+import stocks.Stock;
 
 public class Market extends Location {
     private float tax;

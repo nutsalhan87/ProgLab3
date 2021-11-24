@@ -1,4 +1,4 @@
-package Humans;
+package humans;
 
 public enum WearableThings {
     CYLINDER("Цилиндр"),

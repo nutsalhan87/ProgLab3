@@ -1,4 +1,4 @@
-package Humans;
+package humans;
 
 public interface Sleepable {
     public boolean getSleepCondition();

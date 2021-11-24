@@ -1,6 +1,6 @@
-package Humans;
+package humans;
 
-import Locations.Location;
+import locations.Location;
 
 public class Crowd extends Humans{
     public Crowd(Location location) {

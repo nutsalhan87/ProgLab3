@@ -1,8 +1,8 @@
-package Locations;
+package locations;
 
 import java.util.ArrayList;
 import java.util.List;
-import Stocks.*;
+import stocks.*;
 import java.util.Random;
 
 public class Cities {

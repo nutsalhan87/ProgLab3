@@ -1,11 +1,11 @@
-package Humans;
+package humans;
 
-import Locations.City;
-import Locations.Location;
-import Locations.Cities;
-import Locations.Market;
+import locations.City;
+import locations.Location;
+import locations.Cities;
+import locations.Market;
 
-import Stocks.Stock;
+import stocks.Stock;
 
 import java.util.List;
 import java.util.ArrayList;

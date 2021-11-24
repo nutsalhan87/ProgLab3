@@ -1,4 +1,4 @@
-package Stocks;
+package stocks;
 
 import java.util.Objects;
 

@@ -1,7 +1,7 @@
-import Humans.*;
-import Locations.Cities;
-import TimeOfDay.DayConditions;
-import TimeOfDay.TimeOfDay;
+import humans.*;
+import locations.Cities;
+import timeOfDay.DayConditions;
+import timeOfDay.TimeOfDay;
 
 public class Main {
     public static void main(String[] args){

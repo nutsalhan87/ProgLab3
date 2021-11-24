@@ -1,7 +1,7 @@
-package Humans;
+package humans;
 
-import Locations.Cities;
-import Locations.Location;
+import locations.Cities;
+import locations.Location;
 
 public class Human extends Humans implements Sleepable{
     protected String name;

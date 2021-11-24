@@ -1,4 +1,4 @@
-package Humans;
+package humans;
 
 public enum ThingsToLookAt {
     NEWSPAPER("Газета"),

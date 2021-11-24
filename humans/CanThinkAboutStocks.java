@@ -1,6 +1,6 @@
-package Humans;
+package humans;
 
-import Locations.City;
+import locations.City;
 
 public interface CanThinkAboutStocks {
     public City calculateWhereTheBestOffer();
